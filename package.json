@@ -14,6 +14,7 @@
     "@nuxt/content": "^2.12.1",
     "@pinia/nuxt": "^0.5.1",
     "@unocss/nuxt": "^0.59.2",
+    "clipboard.js": "^1.0.1",
     "dayjs": "^1.11.10",
     "nuxt": "^3.11.2",
     "nuxt-primevue": "^0.3.1",

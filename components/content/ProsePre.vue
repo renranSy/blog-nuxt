@@ -1,8 +1,15 @@
 <template>
-  <pre :class="$props.class"><slot /><i @click="copy(code)" v-show="!isCopy" class="copy pi pi-copy"></i><i v-show="isCopy" class="copy pi pi-check-square"></i></pre>
+  <pre :class="$props.class">
+    <span class="content"><slot /></span>
+    <i @click="copy(code)" v-show="!isCopy"
+       class="copy pi pi-copy"></i>
+    <i v-show="isCopy" class="copy pi pi-check-square"></i>
+  </pre>
 </template>
 
 <script setup lang="ts">
+import clipboard from 'clipboardy'
+
 defineProps({
   code: {
     type: String,
@@ -34,8 +41,8 @@ const isCopy = ref(false)
 const toast = useToast()
 const copy = (code: string) => {
   isCopy.value = true
-  navigator.clipboard.writeText(code)
-  toast.add({ severity: 'success', summary: 'Success', detail: 'Copied!', life: 1000 });
+  clipboard.write(code)
+  toast.add({ severity: 'success', summary: 'Copied!', detail: '已复制到剪切板', life: 1000 })
   setTimeout(() => {
     isCopy.value = false
   }, 1000)
@@ -48,6 +55,7 @@ pre code .line {
 }
 
 pre {
+  display: flex;
   position: relative;
   background: #f8fafc;
   border: 1px solid #e3e8f0;
@@ -56,18 +64,18 @@ pre {
   line-height: 1.70;
   padding: 0.5em;
   border-radius: 0.375em;
-  overflow-x: auto;
 }
 
 pre > code {
   word-break: normal;
 }
 
+.content {
+  width: calc(100vw - 24px);
+  overflow-x: auto;
+}
+
 .copy {
-  position: absolute;
-  top: 0.65em;
-  right: 0.5em;
-  z-index: 9;
   cursor: pointer;
   color: #636c76;
   transition: color 150ms;
