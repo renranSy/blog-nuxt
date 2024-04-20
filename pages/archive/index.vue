@@ -73,7 +73,6 @@ onMounted(() => {
       })
     })
   })
-  console.log(archiveList.value)
 })
 </script>
 
