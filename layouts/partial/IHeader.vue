@@ -40,8 +40,4 @@ const items = ref([
 </script>
 
 <style scoped>
-.router-link-active .router-link-exact-active {
-  @apply underline;
-}
-
 </style>
