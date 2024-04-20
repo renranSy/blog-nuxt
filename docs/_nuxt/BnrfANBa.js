@@ -1,0 +1,1 @@
+import r from"./DRNdzV33.js";import{_ as e,c,b as n,o as a}from"./CsHn9UyJ.js";import"./Bni38aJ7.js";import"./Dtb-SBmZ.js";import"./D2QyJUqC.js";import"./BsYmvPZw.js";import"./CM94DbnZ.js";const s={},_={class:"markdown-body"};function p(o,m){const t=r;return a(),c("article",_,[n(t,{path:o.$router.path},null,8,["path"])])}const b=e(s,[["render",p]]);export{b as default};
