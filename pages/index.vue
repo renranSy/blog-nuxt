@@ -19,8 +19,8 @@
               <span class="text-gray-400 ms-1 text-sm">{{ dayjs(post.date).format('YYYY-MM-DD') }}</span>
             </div>
             <div>
-              <NuxtLink v-for="(tag, index) in post.tags" :key="index" :href="'/tags/' + tag" class="no-underline">
-                <Button class="ms-2 text-md cursor-pointer" severity="secondary">{{ tag }}</Button>
+              <NuxtLink v-for="(tag, index) in post.tags" :key="index" :href="'/tags/' + tag" class="no-underline ms-2">
+                <Tag class="cursor-pointer" severity="secondary" :value="tag"></Tag>
               </NuxtLink>
             </div>
           </div>
