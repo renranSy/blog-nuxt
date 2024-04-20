@@ -14,7 +14,7 @@ import { useTagStore } from '~/store/tag'
 useTagStore().init()
 useHead({
   link: [
-    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    { rel: 'icon', href: '/favicon.ico' }
   ]
 })
 </script>
