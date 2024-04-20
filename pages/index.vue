@@ -27,32 +27,14 @@
         </div>
       </ContentList>
     </div>
-    <div class="ps-8 w-[280px] mt-8">
-      <InputGroup>
-        <InputText placeholder="搜索" />
-        <InputGroupAddon>
-          <i class="pi pi-search"></i>
-        </InputGroupAddon>
-      </InputGroup>
-      <div class="mt-8">
-        <div class="flex items-center text-gray-700 text-xl">
-          <i class="pi pi-hashtag text-lg"></i>
-          <span class="ms-2 font-bold">标签</span>
-        </div>
-        <NuxtLink v-for="(tag, index) in tagStore.allTags" :key="index" :href="'/tags/' + tag.name"
-                  class="my-1 text-gray-700 cursor-pointer hover:text-blue block no-underline">
-          {{ tag.name }}（{{ tag.count }}）
-        </NuxtLink>
-      </div>
+    <div class="ps-8 w-[280px] mt-8 hidden md:block">
+      <ISidebar />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import dayjs from 'dayjs'
-import { useTagStore } from '~/store/tag'
-
-const tagStore = useTagStore()
 
 useHead({
   title: '✨这是荏苒的个人博客',

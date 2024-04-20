@@ -1,7 +1,7 @@
 <template>
   <div>
     <IHeader />
-    <main class="px-2 pt-3 mx-auto max-w-[1200px] min-h-[calc(100vh-159px)]">
+    <main class="px-3 pt-3 mx-auto max-w-[1200px] min-h-[calc(100vh-167px)]">
       <slot />
     </main>
     <IFooter />
