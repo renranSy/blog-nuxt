@@ -6,6 +6,7 @@
       <span class="text-gray-600 ms-1">renranSY</span>
     </a>
     <span class="ms-3 text-sm">🍊</span>
+    <a class="ms-3 no-underline text-gray-600 hover:text-blue-600" href="http://beian.miit.gov.cn/" data-v-125ceb1c="">鄂ICP备2023013812号-1</a>
   </div>
 </template>
 
