@@ -12,7 +12,11 @@
 import { useTagStore } from '~/store/tag'
 
 useTagStore().init()
-
+useHead({
+  link: [
+    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+  ]
+})
 </script>
 <style>
 @import 'primevue/resources/themes/aura-light-green/theme.css';

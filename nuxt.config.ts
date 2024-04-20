@@ -3,12 +3,7 @@ export default defineNuxtConfig({
   ssr: true,
   devtools: { enabled: true },
   app: {
-    pageTransition: { name: 'page', mode: 'out-in' },
-    head: {
-      link: [
-        {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}
-      ]
-    }
+    pageTransition: { name: 'page', mode: 'out-in' }
   },
   modules: [
     'nuxt-primevue',
