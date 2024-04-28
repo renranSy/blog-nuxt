@@ -8,7 +8,7 @@
               :raised="tag.name === currentTag ? 'raised' : null"
               :label="tag.name"></Button>
     </div>
-    <div ref="postsRef">
+    <div>
       <div class="py-8 border-b border-b-style-dashed border-b-gray-300" v-for="post in posts">
         <NuxtLink class="text-xl no-underline text-gray8 font-bold hover:text-blue" :href="post._path">
           {{ post.title }}
@@ -43,7 +43,6 @@ import dayjs from 'dayjs'
 
 const route = useRoute()
 const tagStore = useTagStore()
-const [postsRef] = useAutoAnimate()
 
 const currentTag = ref<string>('')
 const posts = ref<ParsedContent[]>([])

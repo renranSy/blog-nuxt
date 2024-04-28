@@ -1,5 +1,5 @@
 <template>
-  <div ref="archiveRef" class="time-line py-8">
+  <div class="time-line py-8">
     <div class="flex item">
       <div>
         <div class="line"></div>
@@ -41,8 +41,6 @@ type Archive = {
     path: string;
   }[]
 }
-
-const [archiveRef] = useAutoAnimate()
 
 const list = await queryContent('/posts').sort({ date: -1 }).find()
 const archiveList = ref<Archive[]>([])
