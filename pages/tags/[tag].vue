@@ -4,11 +4,11 @@
       <Button v-for="tag in tagStore.allTags"
               @click="changeTag(tag.name)"
               class="me-2 text-sm"
-              :severity="tag.name === currentTag ? null : 'secondary'"
-              :raised="tag.name === currentTag ? 'raised' : null"
+              :severity="tag.name === currentTag ? undefined : 'secondary'"
+              :raised="tag.name === currentTag"
               :label="tag.name"></Button>
     </div>
-    <div>
+    <div ref="listRef">
       <div class="py-8 border-b border-b-style-dashed border-b-gray-300" v-for="post in posts">
         <NuxtLink class="text-xl no-underline text-gray8 font-bold hover:text-blue" :href="post._path">
           {{ post.title }}
@@ -43,6 +43,8 @@ import dayjs from 'dayjs'
 
 const route = useRoute()
 const tagStore = useTagStore()
+
+const [listRef] = useAutoAnimate()
 
 const currentTag = ref<string>('')
 const posts = ref<ParsedContent[]>([])
