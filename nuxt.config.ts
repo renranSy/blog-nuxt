@@ -40,7 +40,17 @@ export default defineNuxtConfig({
         'javascript',
         'nginx',
         'yaml',
-        'sql'
+        'sql',
+        'json',
+        'shell',
+        'cmd',
+        'bash',
+        'zsh',
+        'ts',
+        'tsx',
+        'yaml',
+        'yml',
+        'xml'
       ]
     },
     experimental: {
