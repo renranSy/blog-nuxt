@@ -58,12 +58,15 @@ pre {
   display: flex;
   position: relative;
   background: #f8fafc;
-  border: 1px solid #e3e8f0;
+  border: 1px solid #f6f8fa;
   font-size: 1.2em;
   font-weight: 400;
-  line-height: 1.70;
+  line-height: 1.5;
   padding: 0.5em;
   border-radius: 0.375em;
+  font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+  font-feature-settings: normal;
+  font-variation-settings: normal;
 }
 
 pre > code {

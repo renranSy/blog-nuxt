@@ -1,7 +1,7 @@
 <template>
-    <code>
-      <slot />
-    </code>
+  <code>
+    <slot />
+  </code>
 </template>
 <script setup lang="ts">
 </script>
@@ -11,7 +11,8 @@ code {
   padding: 0.2em 0.4em;
   margin: 0 2px;
   border-radius: 0.375em;
-  font-size: 1.2em;
-  font-weight: 400;
+  font-size: 0.9em;
+  color: #2e3436;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 </style>>

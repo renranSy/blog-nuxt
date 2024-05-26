@@ -34,7 +34,7 @@ const items = ref([
   },
   {
     icon: 'pi pi-github text-xl',
-    href: 'https://github.com/renranSY'
+    href: 'https://github.com/renranSy'
   }
 ])
 </script>

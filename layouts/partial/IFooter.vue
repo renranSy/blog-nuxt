@@ -2,9 +2,9 @@
   <div class="py-5 text-center w-full bg-gray-100 text-gray-600 flex items-center justify-center flex-wrap">
     <div class="flex items-center">
       <span>Copyright © 2017 - 2024</span>
-      <a href="https://www.github.com/renranSY" target="_blank" class="ms-3 flex items-center no-underline">
+      <a href="https://www.github.com/renranSy" target="_blank" class="ms-3 flex items-center no-underline">
         <i class="pi pi-github text-gray-600"></i>
-        <span class="text-gray-600 ms-1">renranSY</span>
+        <span class="text-gray-600 ms-1">renranSy</span>
       </a>
       <span class="ms-3 text-sm">🍊</span>
     </div>

@@ -28,6 +28,7 @@ useHead({
 body {
   margin: 0;
   padding: 0;
+  font-family: BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
 ::-webkit-scrollbar {

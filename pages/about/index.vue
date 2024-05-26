@@ -11,7 +11,7 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: '荏苒，renran，renranSY，这是我的自我介绍'
+      content: '荏苒，renran，renranSy，这是我的自我介绍'
     }
   ]
 })
