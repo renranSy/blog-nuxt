@@ -3,9 +3,6 @@
     <p class="m-0">
       既然选择了远方，便只顾风雨兼程。
     </p>
-    <p class="mt-2 mb-0">
-      联系我：<a class="decoration-none text-blue-5" href="mailto:2480901422@qq.com">2480901422@qq.com</a>
-    </p>
   </Fieldset>
 </template>
 
