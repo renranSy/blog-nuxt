@@ -1,13 +1,13 @@
 <template>
   <div class="flex">
     <div class="flex-1 border-e border-e-style-solid border-e-gray-300 pe-8">
-      <ContentList path="posts" v-slot="{list}">
+      <ContentList :query="query" v-slot="{list}">
         <div class="py-8 border-b border-b-style-dashed border-b-gray-300" v-for="post in list">
           <NuxtLink class="text-xl no-underline text-gray8 font-bold hover:text-blue" :href="post._path">
             {{ post.title }}
           </NuxtLink>
           <div class="markdown-body mt-3">
-            <ContentRendererMarkdown :value="post.excerpt" />
+            <ContentRendererMarkdown :value="post.excerpt || {}" />
           </div>
           <NuxtLink :href="post._path"
                     class="underline text-color-[#0969da] underline-offset-[0.2rem]">
@@ -35,6 +35,7 @@
 
 <script setup lang="ts">
 import dayjs from 'dayjs'
+import type { QueryBuilderParams } from '@nuxt/content/types'
 
 useHead({
   title: '✨这是荏苒的个人博客',
@@ -45,6 +46,8 @@ useHead({
     }
   ]
 })
+
+const query: QueryBuilderParams = { path: 'posts', sort: [{ date: -1 }] }
 </script>
 
 <style scoped>
