@@ -3,7 +3,7 @@
     <div class="flex-1 border-e border-e-style-solid border-e-gray-300 pe-8">
       <ContentList :query="query" v-slot="{list}">
         <div class="py-8 border-b border-b-style-dashed border-b-gray-300" v-for="post in list">
-          <NuxtLink class="text-xl no-underline text-gray8 font-bold hover:text-blue" :href="post._path">
+          <NuxtLink class="text-xl no-underline text-gray8 font-bold hover:text-blue transition-all transition-duration-200" :href="post._path">
             {{ post.title }}
           </NuxtLink>
           <div class="markdown-body mt-3">

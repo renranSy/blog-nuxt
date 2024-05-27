@@ -1,9 +1,13 @@
 <template>
-  <Fieldset legend="介绍">
+  <Fieldset legend="留言">
     <p class="m-0">
-      我是谁，我从哪里来，我到哪里去？
+      既然选择了远方，便只顾风雨兼程。
     </p>
-  </Fieldset></template>
+    <p class="mt-2 mb-0">
+      联系我：<a class="decoration-none text-blue-5" href="mailto:2480901422@qq.com">2480901422@qq.com</a>
+    </p>
+  </Fieldset>
+</template>
 
 <script setup lang="ts">
 useHead({
