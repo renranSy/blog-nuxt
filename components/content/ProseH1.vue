@@ -24,7 +24,7 @@ h1 {
   font-weight: 600;
   line-height: 1.25;
   padding-bottom: 0.3em;
-  font-size: 2.5em;
+  font-size: 2em;
   border-bottom: 1px solid #d0d7deb3;
 }
 </style>

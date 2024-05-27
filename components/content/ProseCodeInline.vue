@@ -9,7 +9,7 @@
 code {
   background: #eff1f3;
   padding: 0.2em 0.4em;
-  margin: 0 2px;
+  margin: 2px;
   border-radius: 0.375em;
   font-size: 0.9em;
   color: #2e3436;

@@ -26,7 +26,7 @@ h2 a {
 
 h2 {
   padding-bottom: 0.3em;
-  font-size: 2em;
+  font-size: 1.7em;
   border-bottom: 1px solid #d0d7deb3;
   margin-top: 24px;
   margin-bottom: 16px;
