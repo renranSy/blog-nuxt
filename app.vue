@@ -14,7 +14,7 @@ import { useTagStore } from '~/store/tag'
 useTagStore().init()
 useHead({
   link: [
-    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    { rel: 'icon', type: 'image/x-icon', href: '/blog/favicon.ico' }
   ],
   meta: [
     { name: 'baidu-site-verification', content: 'codeva-2ruBqadkDP' }

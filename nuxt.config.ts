@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   ssr: true,
   devtools: { enabled: true },
   app: {
+    baseURL: '/blog',
     pageTransition: { name: 'page', mode: 'out-in' }
   },
   modules: [
