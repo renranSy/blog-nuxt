@@ -8,9 +8,15 @@
         </div>
       </template>
       <template #item="{item}">
-        <NuxtLink :href="item.href" class="flex items-center justify-center no-underline text-gray-600">
-          <Button v-if="item.icon" :icon="item.icon" text class="text-gray-600"></Button>
-          <Button v-if="item.label" :label="item.label" text class="text-gray-600" />
+        <NuxtLink @click="() => {
+          umTrackEvent(item.event)
+        }" :href="item.href" class="flex items-center justify-center no-underline text-gray-600">
+          <template v-if="item.icon">
+            <Button :icon="item.icon" text class="text-gray-600"></Button>
+          </template>
+          <template v-if="item.label">
+            <Button :label="item.label" text class="text-gray-600" />
+          </template>
         </NuxtLink>
       </template>
     </Menubar>
@@ -19,21 +25,31 @@
 </template>
 
 <script setup lang="ts">
-const items = ref([
+type Item = {
+  label?: string
+  href: string
+  event: string
+  icon?: string
+}
+const items = ref<Item[]>([
   {
     label: '主页',
+    event: '点击主页',
     href: '/'
   },
   {
     label: '关于',
+    event: '点击关于',
     href: '/about'
   },
   {
     label: '归档',
+    event: '点击归档',
     href: '/archive'
   },
   {
     icon: 'pi pi-github text-xl',
+    event: '点击Github',
     href: 'https://github.com/renranSy'
   }
 ])

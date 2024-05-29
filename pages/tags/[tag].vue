@@ -61,6 +61,8 @@ watch(() => currentTag.value, async (value) => {
 
 onMounted(() => {
   currentTag.value = route.params.tag.toString()
+
+  umTrackView('/tags')
 })
 </script>
 

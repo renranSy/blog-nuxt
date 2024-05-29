@@ -16,6 +16,10 @@ useHead({
     }
   ]
 })
+
+onMounted(() => {
+  umTrackView('/about')
+})
 </script>
 
 <style scoped>
