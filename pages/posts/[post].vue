@@ -6,7 +6,7 @@
         <b>留下评论 📝</b>
       </h3>
     </Divider>
-    <div ref="el"></div>
+    <div ref="el" class="pb-5"></div>
   </article>
 </template>
 
