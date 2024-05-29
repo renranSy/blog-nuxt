@@ -24,7 +24,7 @@ onMounted(() => {
     el: el.value,
     pageKey: route.path,
     pageTitle: `${ document.title }`,
-    server: 'https://blog.renranz.cn/comment',
+    server: 'https://blog.renranz.cn',
     site: '荏苒的个人博客'
   })
 })
