@@ -1,6 +1,11 @@
 <template>
   <article class="markdown-body">
     <ContentDoc :path="$router.path" />
+    <Divider align="left" type="dotted">
+      <h3>
+        <b>留下评论 📝</b>
+      </h3>
+    </Divider>
     <div ref="el"></div>
   </article>
 </template>
