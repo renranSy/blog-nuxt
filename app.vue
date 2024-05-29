@@ -8,7 +8,6 @@
     <IScrollTop />
   </div>
 </template>
-<script defer src="http://81.68.86.65:3000/script.js" data-website-id="1f1a69a1-746a-4665-9cbc-97441c0eea6b"></script>
 <script setup lang="ts">
 import { useTagStore } from '~/store/tag'
 

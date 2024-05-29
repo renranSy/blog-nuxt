@@ -5073,6 +5073,11 @@ nuxt-primevue@^0.3.1:
     "@nuxt/kit" "^3.7.3"
     primevue "~3.49.1"
 
+nuxt-umami@^2.6.2:
+  version "2.6.2"
+  resolved "https://registry.yarnpkg.com/nuxt-umami/-/nuxt-umami-2.6.2.tgz#bd8d2c257eb260f1d30afb0ffe99e605f56f846a"
+  integrity sha512-2EtGdp04jml4967Qgo1lv2jrMPnojuDnJD5aMaNAxbwG4EGTkpRjymNDokLEzDiJEEovkhxrY3pJAX/TO8f4/A==
+
 nuxt@^3.11.2:
   version "3.11.2"
   resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-3.11.2.tgz#38e14b96ff5669b1fbae7fc99e8d79042dce658d"

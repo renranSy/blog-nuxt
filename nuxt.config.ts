@@ -15,6 +15,7 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@formkit/auto-animate'
   ],
+  extends: ['nuxt-umami'],
   plugins: [],
   components: [
     {
@@ -59,5 +60,11 @@ export default defineNuxtConfig({
         'xml'
       ]
     }
+  },
+  appConfig: {
+    host: '81.68.86.65:3000',
+    id: '1f1a69a1-746a-4665-9cbc-97441c0eea6b',
+    autoTrack: true,
+    version: 2
   }
 })

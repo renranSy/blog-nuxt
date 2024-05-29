@@ -19,6 +19,7 @@
     "dayjs": "^1.11.10",
     "nuxt": "^3.11.2",
     "nuxt-primevue": "^0.3.1",
+    "nuxt-umami": "^2.6.2",
     "primeicons": "^7.0.0",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
