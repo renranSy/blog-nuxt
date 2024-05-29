@@ -19,7 +19,7 @@ onMounted(() => {
     el: el.value,
     pageKey: route.path,
     pageTitle: `${ document.title }`,
-    server: 'http://localhost:8080',
+    server: 'https://blog.renranz.cn',
     site: '荏苒的个人博客'
   })
 })
