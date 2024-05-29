@@ -5,6 +5,9 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: 'page', mode: 'out-in' }
   },
+  devServer: {
+    port: 3001
+  },
   modules: [
     'nuxt-primevue',
     '@unocss/nuxt',
