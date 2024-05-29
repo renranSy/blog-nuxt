@@ -47,8 +47,6 @@ onMounted(() => {
     server: 'https://blog.renranz.cn',
     site: '荏苒的个人博客'
   })
-
-  umTrackView('/posts')
 })
 
 onBeforeUnmount(() => {

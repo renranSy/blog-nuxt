@@ -71,8 +71,6 @@ onMounted(() => {
       })
     })
   })
-
-  umTrackView('/archive')
 })
 </script>
 

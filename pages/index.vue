@@ -48,10 +48,6 @@ useHead({
 })
 
 const query: QueryBuilderParams = { path: 'posts', sort: [{ date: -1 }] }
-
-onMounted(() => {
-  umTrackView('/')
-})
 </script>
 
 <style scoped>
