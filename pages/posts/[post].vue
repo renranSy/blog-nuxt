@@ -57,7 +57,4 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped>
-h1 {
-
-}
 </style>
