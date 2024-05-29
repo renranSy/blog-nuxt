@@ -4,10 +4,10 @@
       <h1 class="mb-0 text-[28px]">{{ article.title }}</h1>
       <div class="flex items-center mt-1" style="height: 36px">
         <div class="flex items-center text-gray-500">
-         发布时间：{{ dayjs(article.date).format('YYYY/MM/DD HH:mm') }}
+          发布时间：{{ dayjs(article.date).format('YYYY/MM/DD HH:mm') }}
         </div>
         <div class="flex  items-center text-gray-500 ms-4">
-            浏览量：<span class="artalk-comment-count"></span>
+          浏览量：<span class="artalk-comment-count"></span>
         </div>
       </div>
     </div>
@@ -39,13 +39,15 @@ const getArticle = async () => {
 
 onMounted(() => {
   getArticle()
-  artalk = Artalk.init({
-    el: el.value,
-    pageKey: route.path,
-    pageTitle: `${ document.title }`,
-    server: 'https://blog.renranz.cn',
-    site: '荏苒的个人博客',
-    countEl: '.artalk-comment-count'
+  nextTick(() => {
+    artalk = Artalk.init({
+      el: el.value,
+      pageKey: route.path,
+      pageTitle: `${ document.title }`,
+      server: 'https://blog.renranz.cn',
+      site: '荏苒的个人博客',
+      countEl: '.artalk-comment-count'
+    })
   })
 })
 
