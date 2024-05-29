@@ -7,7 +7,7 @@
          发布时间：{{ dayjs(article.date).format('YYYY/MM/DD HH:mm') }}
         </div>
         <div class="flex  items-center text-gray-500 ms-4">
-            浏览量：<span class="artalk-comment-count "></span>
+            浏览量：<span class="artalk-comment-count"></span>
         </div>
       </div>
     </div>
@@ -44,7 +44,8 @@ onMounted(() => {
     pageKey: route.path,
     pageTitle: `${ document.title }`,
     server: 'https://blog.renranz.cn',
-    site: '荏苒的个人博客'
+    site: '荏苒的个人博客',
+    countEl: '.artalk-comment-count'
   })
 })
 
