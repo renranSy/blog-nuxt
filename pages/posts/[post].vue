@@ -7,7 +7,7 @@
           发布时间：{{ dayjs(article.date).format('YYYY/MM/DD HH:mm') }}
         </div>
         <div class="flex  items-center text-gray-500 ms-4">
-          浏览量：<span class="artalk-pv-count"></span>
+          浏览量：<span class="pv">...</span>
         </div>
       </div>
     </div>
@@ -28,6 +28,7 @@ import type { ParsedContent } from '@nuxt/content/types'
 import dayjs from 'dayjs'
 
 const el = ref<HTMLElement>()
+const pvRef = ref<HTMLElement>()
 const route = useRoute()
 
 let artalk: Artalk
@@ -39,15 +40,13 @@ const getArticle = async () => {
 
 onMounted(() => {
   getArticle()
-  nextTick(() => {
-    artalk = Artalk.init({
-      el: el.value,
-      pageKey: route.path,
-      pageTitle: `${ document.title }`,
-      server: 'https://blog.renranz.cn',
-      site: '荏苒的个人博客',
-      pvEl: '.artalk-pv-count'
-    })
+  artalk = Artalk.init({
+    el: el.value,
+    pageKey: route.path,
+    pageTitle: `${ document.title }`,
+    server: 'https://blog.renranz.cn',
+    site: '荏苒的个人博客',
+    pvEl: '.pv'
   })
 })
 
