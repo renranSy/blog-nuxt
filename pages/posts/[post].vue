@@ -6,9 +6,7 @@
         <b>留下评论 📝</b>
       </h3>
     </Divider>
-    <ClientOnly>
-      <div ref="el"></div>
-    </ClientOnly>
+    <div ref="el"></div>
   </article>
 </template>
 
