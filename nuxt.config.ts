@@ -24,6 +24,9 @@ export default defineNuxtConfig({
     }
   ],
   content: {
+    experimental: {
+      search: { ignoredTags: [], filterQuery: {}, indexed: true }
+    },
     highlight: {
       theme: 'github-light-default',
       preload: [
@@ -52,9 +55,6 @@ export default defineNuxtConfig({
         'yml',
         'xml'
       ]
-    },
-    experimental: {
-      clientDB: true
     }
   }
 })

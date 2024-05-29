@@ -1,7 +1,7 @@
 <template>
   <InputGroup>
-    <InputText placeholder="搜索" />
-    <InputGroupAddon>
+    <InputText placeholder="搜索" v-model:value="search" @keydown.enter="onSearch" />
+    <InputGroupAddon @click="onSearch">
       <i class="pi pi-search"></i>
     </InputGroupAddon>
   </InputGroup>
@@ -21,6 +21,13 @@
 import { useTagStore } from '~/store/tag'
 
 const tagStore = useTagStore()
+
+const search = ref('')
+
+const onSearch = async () => {
+  const results = await useAsyncData('search-articles', () => queryContent('/posts').where({ title: { $containsAny: [search.value] } }).find())
+  console.log(results.data)
+}
 </script>
 
 <style scoped>

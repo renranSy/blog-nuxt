@@ -1,7 +1,7 @@
 <template>
   <div ref="scrollTopRef">
     <ScrollTop
-      :threshold="100"
+      :threshold="200"
       icon="pi pi-arrow-up"
       :pt="{
             root: 'w-3rem h-3rem bg-pink-300',
