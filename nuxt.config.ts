@@ -13,7 +13,8 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     '@nuxt/content',
     '@pinia/nuxt',
-    '@formkit/auto-animate'
+    '@formkit/auto-animate',
+    '@nuxtjs/sitemap'
   ],
   extends: ['nuxt-umami'],
   plugins: [],
@@ -60,5 +61,11 @@ export default defineNuxtConfig({
         'xml'
       ]
     }
+  },
+  site: {
+    url: 'https://blog.renranz.cn'
+  },
+  sitemap: {
+    sources: ['/api/sitemap']
   }
 })

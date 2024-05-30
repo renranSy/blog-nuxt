@@ -4,5 +4,5 @@ export default defineAppConfig({
     id: '1f1a69a1-746a-4665-9cbc-97441c0eea6b',
     version: 2,
     customEndpoint: '/api/send'
-  }
+  },
 })

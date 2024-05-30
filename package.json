@@ -12,6 +12,7 @@
   "dependencies": {
     "@formkit/auto-animate": "^0.8.2",
     "@nuxt/content": "^2.12.1",
+    "@nuxtjs/sitemap": "^5.2.0",
     "@pinia/nuxt": "^0.5.1",
     "@unocss/nuxt": "^0.59.2",
     "artalk": "^2.8.6",
