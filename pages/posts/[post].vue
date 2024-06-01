@@ -26,6 +26,7 @@ import Artalk from 'artalk'
 import 'artalk/dist/Artalk.css'
 import type { ParsedContent } from '@nuxt/content/types'
 import dayjs from 'dayjs'
+import sha256 from 'fast-sha256'
 
 const el = ref<HTMLElement>()
 const pvRef = ref<HTMLElement>()
@@ -45,7 +46,10 @@ onMounted(() => {
     pageKey: route.path,
     pageTitle: `${ document.title }`,
     server: 'https://blog.renranz.cn',
-    site: '荏苒的个人博客'
+    site: '荏苒的个人博客',
+    avatarURLBuilder(comment) {
+      return comment.email ? `https://weavatar.com/avatar/${ sha256(new TextEncoder().encode(comment.email.toLowerCase())) }` : 'https://sdn.geekzu.org/avatar/'
+    }
   })
 })
 
