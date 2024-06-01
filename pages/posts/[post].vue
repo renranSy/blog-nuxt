@@ -46,10 +46,7 @@ onMounted(() => {
     pageKey: route.path,
     pageTitle: `${ document.title }`,
     server: 'https://blog.renranz.cn',
-    site: '荏苒的个人博客',
-    avatarURLBuilder(comment) {
-      return comment.email ? `https://weavatar.com/avatar/${ sha256(new TextEncoder().encode(comment.email.toLowerCase())) }` : 'https://sdn.geekzu.org/avatar/'
-    }
+    site: '荏苒的个人博客'
   })
 })
 
