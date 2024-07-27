@@ -1,6 +1,4 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import Aura from '@primevue/themes/aura'
-
 export default defineNuxtConfig({
   ssr: true,
   devtools: { enabled: true },
@@ -11,7 +9,7 @@ export default defineNuxtConfig({
     port: 3001
   },
   modules: [
-    '@primevue/nuxt-module',
+    'nuxt-primevue',
     '@unocss/nuxt',
     '@nuxt/content',
     '@pinia/nuxt',
@@ -73,9 +71,6 @@ export default defineNuxtConfig({
   },
   primevue: {
     options: {
-      theme: {
-        preset: Aura
-      },
       ripple: true
     }
   }

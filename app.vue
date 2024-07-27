@@ -9,9 +9,13 @@
   </div>
 </template>
 <script setup lang="ts">
+import 'primevue/resources/themes/aura-light-pink/theme.css'
+
 import { useTagStore } from '~/store/tag'
+import IScrollTop from '~/components/IScrollTop.vue'
 
 useTagStore().init()
+
 useHead({
   link: [
     { rel: 'icon', type: 'image/x-icon', href: '/blog/favicon.ico' }
@@ -56,5 +60,4 @@ body {
   opacity: 0;
   transform: translateY(-16px);
 }
-
 </style>

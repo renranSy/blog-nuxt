@@ -22,7 +22,7 @@
             </div>
             <div>
               <NuxtLink v-for="(tag, index) in post.tags" :key="index" :href="'/tags/' + tag" class="no-underline ms-2">
-                <Tag class="cursor-pointer text-[0.2rem]" severity="secondary" :value="tag"></Tag>
+                <Tag class="cursor-pointer" severity="secondary" :value="tag"></Tag>
               </NuxtLink>
             </div>
           </div>
@@ -55,9 +55,5 @@ const query: QueryBuilderParams = { path: 'posts', sort: [{ date: -1 }] }
 <style scoped>
 :deep(.p-card-body) {
   padding: 4px;
-}
-
-:deep(.p-tag-label) {
-  font-size: 0.75rem;
 }
 </style>
