@@ -7,7 +7,9 @@
             {{ post.title }}
           </NuxtLink>
           <div class="markdown-body mt-3">
-            <ContentRendererMarkdown :value="post.excerpt || {}" />
+            <template v-if="post.excerpt">
+              <ContentDoc :path="post._path" :excerpt="true" />
+            </template>
           </div>
           <NuxtLink :href="post._path"
                     class="underline text-color-[#0969da] underline-offset-[0.2rem]">
@@ -20,7 +22,7 @@
             </div>
             <div>
               <NuxtLink v-for="(tag, index) in post.tags" :key="index" :href="'/tags/' + tag" class="no-underline ms-2">
-                <Tag class="cursor-pointer" severity="secondary" :value="tag"></Tag>
+                <Tag class="cursor-pointer text-[0.2rem]" severity="secondary" :value="tag"></Tag>
               </NuxtLink>
             </div>
           </div>
@@ -35,7 +37,7 @@
 
 <script setup lang="ts">
 import dayjs from 'dayjs'
-import type { QueryBuilderParams } from '@nuxt/content/types'
+import type { QueryBuilderParams } from '@nuxt/content'
 
 useHead({
   title: '✨这是荏苒的个人博客',
@@ -53,5 +55,9 @@ const query: QueryBuilderParams = { path: 'posts', sort: [{ date: -1 }] }
 <style scoped>
 :deep(.p-card-body) {
   padding: 4px;
+}
+
+:deep(.p-tag-label) {
+  font-size: 0.75rem;
 }
 </style>

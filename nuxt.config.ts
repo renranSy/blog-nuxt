@@ -1,4 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import Aura from '@primevue/themes/aura'
+
 export default defineNuxtConfig({
   ssr: true,
   devtools: { enabled: true },
@@ -8,13 +10,22 @@ export default defineNuxtConfig({
   devServer: {
     port: 3001
   },
+  nitro: {
+    devProxy: {
+      '/api/v2': {
+        target: 'https://blog.renranz.cn',
+        changeOrigin: true
+      }
+    }
+  },
   modules: [
-    'nuxt-primevue',
+    '@primevue/nuxt-module',
     '@unocss/nuxt',
     '@nuxt/content',
     '@pinia/nuxt',
     '@formkit/auto-animate',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    '@nuxtjs/robots'
   ],
   extends: ['nuxt-umami'],
   plugins: [],
@@ -67,5 +78,13 @@ export default defineNuxtConfig({
   },
   sitemap: {
     sources: ['/api/sitemap']
+  },
+  primevue: {
+    options: {
+      theme: {
+        preset: Aura
+      },
+      ripple: true
+    }
   }
 })

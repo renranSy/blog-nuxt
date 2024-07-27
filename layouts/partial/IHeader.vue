@@ -1,6 +1,6 @@
 <template>
   <header class="border-b-style-solid border-b-1 border-b-gray-100">
-    <Menubar :model="items" class="max-w-[1200px] mx-auto px-3 py-5 flex justify-between items-center border-0">
+    <Menubar :model="items" class="max-w-[1200px] mx-auto px-3 py-5 flex justify-between items-center">
       <template #start>
         <div>
           <NuxtLink href="/" class="text-2xl font-bold text-gray-800 no-underline">荏苒</NuxtLink>
@@ -12,10 +12,10 @@
           umTrackEvent(item.event)
         }" :href="item.href" class="flex items-center justify-center no-underline text-gray-600">
           <template v-if="item.icon">
-            <Button :icon="item.icon" text class="text-gray-600"></Button>
+            <Button :icon="item.icon" text severity="secondary" />
           </template>
           <template v-if="item.label">
-            <Button :label="item.label" text class="text-gray-600" />
+            <Button :label="item.label as string" text severity="secondary" />
           </template>
         </NuxtLink>
       </template>
@@ -56,4 +56,7 @@ const items = ref<Item[]>([
 </script>
 
 <style scoped>
+.p-menubar {
+  border: none !important;
+}
 </style>

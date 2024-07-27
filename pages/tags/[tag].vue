@@ -14,7 +14,9 @@
           {{ post.title }}
         </NuxtLink>
         <div class="markdown-body mt-3">
-          <ContentDoc :path="post._path" :excerpt="true" />
+          <template v-if="post.excerpt">
+            <ContentDoc :path="post._path" :excerpt="true" />
+          </template>
         </div>
         <NuxtLink :href="post._path"
                   class="underline text-color-[#0969da] underline-offset-[0.2rem]">
@@ -38,8 +40,8 @@
 
 <script setup lang="ts">
 import { useTagStore } from '~/store/tag'
-import type { ParsedContent } from '@nuxt/content/types'
 import dayjs from 'dayjs'
+import type { ParsedContent } from '@nuxt/content'
 
 const route = useRoute()
 const tagStore = useTagStore()
