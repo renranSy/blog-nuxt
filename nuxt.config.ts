@@ -10,14 +10,6 @@ export default defineNuxtConfig({
   devServer: {
     port: 3001
   },
-  nitro: {
-    devProxy: {
-      '/api/v2': {
-        target: 'https://blog.renranz.cn',
-        changeOrigin: true
-      }
-    }
-  },
   modules: [
     '@primevue/nuxt-module',
     '@unocss/nuxt',
