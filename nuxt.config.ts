@@ -1,7 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  ssr: true,
-  devtools: { enabled: true },
   app: {
     pageTransition: { name: 'page', mode: 'out-in' }
   },
@@ -67,7 +65,10 @@ export default defineNuxtConfig({
     url: 'https://blog.renranz.cn'
   },
   sitemap: {
-    sources: ['/api/sitemap']
+    sources: ['/api/sitemap'],
+    cacheMaxAgeSeconds: 6 * 60 * 60,
+    autoLastmod: true,
+    xsl: false
   },
   primevue: {
     options: {
