@@ -24,9 +24,8 @@
 <script setup lang="ts">
 import Artalk from 'artalk'
 import 'artalk/dist/Artalk.css'
-import type { ParsedContent } from '@nuxt/content/types'
 import dayjs from 'dayjs'
-import sha256 from 'fast-sha256'
+import type { ParsedContent } from '@nuxt/content'
 
 const el = ref<HTMLElement>()
 const pvRef = ref<HTMLElement>()
